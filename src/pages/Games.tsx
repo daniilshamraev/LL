@@ -25,7 +25,7 @@ function Games() {
             withCredentials: true,
             headers: {
                 'Content-Type': 'application/json',
-                'Server': 'life-line-dev-16d8e83fea40.herokuapp.com',
+                'Host': 'life-line-dev-16d8e83fea40.herokuapp.com',
             }
         };
 
