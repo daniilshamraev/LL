@@ -16,11 +16,20 @@ function Games() {
 
     useEffect(() => {
         impactOccurred('soft')
-        const url = 'https://life-line-dev-16d8e83fea40.herokuapp.com/api/games'
-        axios.get(url).then((resp: { data: string; }) => {
-            const allGames = JSON.parse(resp.data);
-            setGames(allGames);
-        })
+        let config = {
+            method: 'get',
+            maxBodyLength: Infinity,
+            url: 'https://life-line-dev-16d8e83fea40.herokuapp.com/api/games',
+            headers: {}
+        };
+
+        axios.request(config)
+            .then((response) => {
+                setGames(JSON.parse(response.data));
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     }, [])
     return (
         <div>
