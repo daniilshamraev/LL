@@ -18,11 +18,9 @@ function Games() {
         impactOccurred('soft')
         let config = {
             method: 'get',
-            mode: 'cors',
             maxBodyLength: Infinity,
             url: 'https://life-line-dev-16d8e83fea40.herokuapp.com/api/games',
             headers: {
-                'Access-Control-Allow-Origin': "*",
                 'Content-Type': 'application/json'
             }
         };
