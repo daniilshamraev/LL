@@ -22,6 +22,7 @@ function Games() {
             maxBodyLength: Infinity,
             url: 'https://life-line-dev-16d8e83fea40.herokuapp.com/api/games',
             headers: {
+                'Accept': '*/*',
                 'Access-Control-Allow-Origin': "*",
                 'Content-Type': 'application/json'
             }
