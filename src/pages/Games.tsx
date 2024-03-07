@@ -51,7 +51,7 @@ function Games() {
                     typeof games === "boolean" && (
                         <>
                             <div
-                                className="shadow rounded-md p-4 max-w-sm w-full mx-auto">
+                                className="shadow rounded-md p-4 mb-2 max-w-sm w-full mx-auto">
                                 <div
                                     className="animate-pulse flex space-x-4">
                                     <div
@@ -76,7 +76,7 @@ function Games() {
                                 </div>
                             </div>
                             <div
-                                className="shadow rounded-md p-4 max-w-sm w-full mx-auto">
+                                className="shadow rounded-md p-4 mb-2 max-w-sm w-full mx-auto">
                                 <div
                                     className="animate-pulse flex space-x-4">
                                     <div
@@ -101,7 +101,7 @@ function Games() {
                                 </div>
                             </div>
                             <div
-                                className="shadow rounded-md p-4 max-w-sm w-full mx-auto">
+                                className="shadow rounded-md p-4 mb-2 max-w-sm w-full mx-auto">
                                 <div
                                     className="animate-pulse flex space-x-4">
                                     <div
@@ -126,7 +126,7 @@ function Games() {
                                 </div>
                             </div>
                             <div
-                                className="shadow rounded-md p-4 max-w-sm w-full mx-auto">
+                                className="shadow rounded-md p-4 mb-2 max-w-sm w-full mx-auto">
                                 <div
                                     className="animate-pulse flex space-x-4">
                                     <div
@@ -151,7 +151,7 @@ function Games() {
                                 </div>
                             </div>
                             <div
-                                className="shadow rounded-md p-4 max-w-sm w-full mx-auto">
+                                className="shadow rounded-md p-4 mb-2 max-w-sm w-full mx-auto">
                                 <div
                                     className="animate-pulse flex space-x-4">
                                     <div
