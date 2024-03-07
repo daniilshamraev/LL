@@ -33,7 +33,7 @@ function Games() {
             <h1>Игры</h1>
             <div className="flex flex-col pt-8">
                 {
-                    games && (
+                    typeof games === "boolean" && (
                         <div
                             className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
                             <div
