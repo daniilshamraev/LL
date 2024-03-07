@@ -25,10 +25,6 @@ function Games() {
             withCredentials: true,
             headers: {
                 'Content-Type': 'application/json',
-                'Content-Encoding': 'gzip, deflate, br',
-                'Content-Language': 'ru,en;q=0.9',
-                'Connection': 'keep-alive',
-                'Dnt': '1',
                 'Server': 'life-line-dev-16d8e83fea40.herokuapp.com',
             }
         };
