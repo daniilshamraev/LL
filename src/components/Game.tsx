@@ -1,28 +1,33 @@
 import {Disclosure} from "@headlessui/react";
 import {FcLikePlaceholder} from "react-icons/fc";
-import GameProps from "../iterfaces/games.ts";
+import {useEffect} from "react";
 
-function Game(game: GameProps) {
+function Game({name, id, description, image}) {
+
+    useEffect(() => {
+        console.log({name, id, description, image})
+    }, [])
+
     return (
         <Disclosure as="div">
             <Disclosure.Button>
                 <div className={'mt-4' +
                     'w-full flex items-center'}>
                     <img
-                        src={game.image}
+                        src={image}
                         alt="Game icon"
                         className={'overflow-clip w-20' +
                             ' h-20 rounded-full'}/>
                     <div className="flex flex-col">
-                        <span
-                            className={'ml-4 text-2xl'}>{game.name}
+                        <span className={'ml-4 text-2xl'}>
+                            {name}
                         </span>
                     </div>
                 </div>
             </Disclosure.Button>
 
             <Disclosure.Panel as="div">
-                <p>{game.description}</p>
+                <p>{description}</p>
                 {/*<div className="">*/}
                 {/*    <ul>*/}
                 {/*        <h2 className={'mt-6 text-xl' +*/}
@@ -49,7 +54,7 @@ function Game(game: GameProps) {
                 {/*</div>*/}
                 <div
                     className="flex items-center justify-between mb-2">
-                    <a href={'https://t.me/youtbchnlbot?start=' + game.id}>
+                    <a href={'https://t.me/youtbchnlbot?start=' + id}>
                         <button
                             className={'mr-4 mt-2 bg-[color:var(--tg-theme-button-color)] text-[color:var(--tg-theme-button-text-color)]'}>Играть
                         </button>

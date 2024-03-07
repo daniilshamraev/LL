@@ -12,7 +12,7 @@ function Games() {
         useHapticFeedback();
     const navigate = useNavigate();
 
-    const [games, setGames] = useState<[GameProps] | boolean>(false)
+    const [games, setGames] = useState<GameProps[]>()
 
     useEffect(() => {
         impactOccurred('soft')
@@ -29,7 +29,9 @@ function Games() {
 
         axios.request(config)
             .then((response) => {
-                setGames(JSON.parse(response.data));
+                setGames(() => {
+                    return response.data
+                });
             })
             .catch((error) => {
                 console.log(error);
@@ -46,7 +48,7 @@ function Games() {
             <h1>Игры</h1>
             <div className="flex flex-col pt-8">
                 {
-                    typeof games === "boolean" && (
+                    !games && (
                         <>
                             <div
                                 className="shadow rounded-md p-4 mb-2 max-w-sm w-full mx-auto">
@@ -177,14 +179,16 @@ function Games() {
                     )
                 }
                 {
-                    !games && (
+                    games && (
                         <>
                             {
-                                typeof games !== "boolean" ? games?.map((_game: GameProps) => (
-                                    // @ts-ignore
+                                games.map((_game: GameProps) => (
                                     <Game key={_game.id}
-                                          game={_game}/>
-                                )) : <p></p>
+                                          description={_game.description}
+                                          id={_game.id}
+                                          image={_game.image}
+                                          name={_game.name}/>
+                                ))
                             }
                         </>
                     )
