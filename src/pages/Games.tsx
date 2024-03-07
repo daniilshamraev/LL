@@ -18,12 +18,17 @@ function Games() {
         impactOccurred('soft')
         let config = {
             method: 'get',
-            mode: 'no-cors',
+            mode: 'cors',
             maxBodyLength: Infinity,
             url: 'https://life-line-dev-16d8e83fea40.herokuapp.com/api/games',
             crossOrigin: true,
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'ru,en;q=0.9',
+                'Connection': 'keep-alive',
+                'Dnt': '1',
+                'Host': 'life-line-dev-16d8e83fea40.herokuapp.com',
             }
         };
 
