@@ -44,7 +44,7 @@ function Games() {
                 {
                     typeof games === "boolean" && (
                         <div
-                            className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
+                            className="border shadow rounded-md p-4 max-w-sm w-full mx-auto">
                             <div
                                 className="animate-pulse flex space-x-4">
                                 <div
@@ -77,7 +77,7 @@ function Games() {
                                     // @ts-ignore
                                     <Game key={_game.id}
                                           game={_game}/>
-                                )) : <p>Error</p>
+                                )) : <p></p>
                             }
                         </>
                     )
