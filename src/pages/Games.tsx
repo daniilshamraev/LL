@@ -22,13 +22,14 @@ function Games() {
             maxBodyLength: Infinity,
             url: 'https://life-line-dev-16d8e83fea40.herokuapp.com/api/games',
             crossOrigin: true,
+            withCredentials: true,
             headers: {
                 'Content-Type': 'application/json',
-                'Accept-Encoding': 'gzip, deflate, br',
-                'Accept-Language': 'ru,en;q=0.9',
+                'Content-Encoding': 'gzip, deflate, br',
+                'Content-Language': 'ru,en;q=0.9',
                 'Connection': 'keep-alive',
                 'Dnt': '1',
-                'Host': 'life-line-dev-16d8e83fea40.herokuapp.com',
+                'Server': 'life-line-dev-16d8e83fea40.herokuapp.com',
             }
         };
 
