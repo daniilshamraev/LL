@@ -24,7 +24,7 @@ function App() {
 
     useEffect(() => {
         let config = {
-            method: 'post',
+            method: 'POST',
             mode: 'cors',
             maxBodyLength: Infinity,
             url: 'https://life-line-dev-16d8e83fea40.herokuapp.com/api/user',
