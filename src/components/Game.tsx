@@ -54,7 +54,7 @@ function Game({name, id, description, image}) {
                 {/*</div>*/}
                 <div
                     className="flex items-center justify-between mb-2">
-                    <a href={'https://t.me/youtbchnlbot?start=' + id}>
+                    <a href={'https://t.me/StoryChoiceBot?start=' + id}>
                         <button
                             className={'mr-4 mt-2 bg-[color:var(--tg-theme-button-color)] text-[color:var(--tg-theme-button-text-color)]'}>Играть
                         </button>
