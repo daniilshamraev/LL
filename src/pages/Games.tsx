@@ -23,8 +23,13 @@ function Games() {
             url: 'https://life-line-dev-16d8e83fea40.herokuapp.com/api/games',
             crossOrigin: true,
             headers: {
-                'Content-Type': 'application/json',
-                'Host': 'life-line-dev-16d8e83fea40.herokuapp.com',
+                'Accept': 'application/json, text/plain, */*',
+                'Origin': 'https://ll-8i6.pages.dev',
+                'Referer': 'https://ll-8i6.pages.dev/',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'cross-site',
+                'Content-Type': 'application/json'
             }
         };
 

@@ -23,26 +23,35 @@ function App() {
     const userFriendlyAddress = useTonAddress();
 
     useEffect(() => {
+        let data = JSON.stringify({
+            "init_data": initData,
+            "wallet_address": userFriendlyAddress
+        });
+
         let config = {
-            method: 'POST',
-            mode: 'cors',
+            method: 'post',
             maxBodyLength: Infinity,
             url: 'https://life-line-dev-16d8e83fea40.herokuapp.com/api/user',
-            crossOrigin: true,
             headers: {
-                'Content-Type': 'application/json',
-                'Host': 'life-line-dev-16d8e83fea40.herokuapp.com',
-                'TelegramData': initData,
-                'WalletAddress': userFriendlyAddress,
-            }
+                'Accept': 'application/json, text/plain, */*',
+                'Origin': 'https://ll-8i6.pages.dev',
+                'Referer': 'https://ll-8i6.pages.dev/',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'cross-site',
+                'Content-Type': 'application/json'
+            },
+            data: data
         };
 
         axios.request(config)
-            .then(() => {
+            .then((response) => {
+                console.log(JSON.stringify(response.data));
             })
             .catch((error) => {
                 console.log(error);
             });
+
     }, [userFriendlyAddress]);
 
     const [, notificationOccurred] =
