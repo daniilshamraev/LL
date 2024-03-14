@@ -47,7 +47,9 @@ function App() {
         axios.request(config)
             .then((response) => {
                 setCoinBalance(() => {
-                    return Number(response.data.coin_balance)
+                    return Number(
+                        response.data.coin_balance
+                    )
                 })
             })
             .catch((error) => {

@@ -1,12 +1,14 @@
 import {Disclosure} from "@headlessui/react";
 import {FcLikePlaceholder} from "react-icons/fc";
-import {useEffect} from "react";
+import {
+    useHapticFeedback
+} from "@vkruglikov/react-telegram-web-app";
 
 function Game({name, id, description, image}) {
 
-    useEffect(() => {
-        console.log({name, id, description, image})
-    }, [])
+    const [impactOccurred] =
+        useHapticFeedback();
+
 
     return (
         <Disclosure as="div">
@@ -27,7 +29,7 @@ function Game({name, id, description, image}) {
             </Disclosure.Button>
 
             <Disclosure.Panel as="div">
-                <p>{description}</p>
+                <p className={"whitespace-pre-line"}>{description}</p>
                 {/*<div className="">*/}
                 {/*    <ul>*/}
                 {/*        <h2 className={'mt-6 text-xl' +*/}
@@ -54,7 +56,11 @@ function Game({name, id, description, image}) {
                 {/*</div>*/}
                 <div
                     className="flex items-center justify-between mb-2">
-                    <a href={'https://t.me/StoryChoiceBot?start=' + id}>
+                    <a href={'https://t.me/StoryChoiceBot?start=' + id}
+                       onClick={() => {
+                           impactOccurred('soft')
+
+                       }}>
                         <button
                             className={'mr-4 mt-2 bg-[color:var(--tg-theme-button-color)] text-[color:var(--tg-theme-button-text-color)]'}>Играть
                         </button>
