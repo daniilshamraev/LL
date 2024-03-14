@@ -14,7 +14,7 @@ import {
     TonConnectButton,
     useTonAddress
 } from "@tonconnect/ui-react";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 
@@ -46,7 +46,9 @@ function App() {
 
         axios.request(config)
             .then((response) => {
-                console.log(JSON.stringify(response.data));
+                setCoinBalance(() => {
+                    return Number(response.data.coin_balance)
+                })
             })
             .catch((error) => {
                 console.log(error);
@@ -56,6 +58,7 @@ function App() {
 
     const [, notificationOccurred] =
         useHapticFeedback();
+    const [coinBalance, setCoinBalance] = useState(0.0);
     return (
         <>
             {
@@ -84,8 +87,10 @@ function App() {
                             ' text-center'}>Баланс
                         </h2>
                         <div className="w-full text-center">
-                            <h1 className={'mt-4 text-5xl font-bold'}>8400,<span
-                                className={'text-3xl ml-1 font-medium'}>45</span>
+                            <h1 className={'mt-4' +
+                                ' text-5xl font-bold'}>{Math.trunc(coinBalance)},<span
+                                className={'text-3xl' +
+                                    ' ml-1 font-medium'}>{coinBalance - Math.trunc(coinBalance)}</span>
                                 <code
                                     className={'ml-3 text-[color:var(--tg-theme-subtitle-text-color)]' +
                                         ' text-2xl'}>LCOIN</code>
