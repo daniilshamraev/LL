@@ -95,7 +95,7 @@ function App() {
                                     ' ml-1 font-medium'}>{coinBalance - Math.trunc(coinBalance)}</span>
                                 <code
                                     className={'ml-3 text-[color:var(--tg-theme-subtitle-text-color)]' +
-                                        ' text-2xl'}>LCOIN</code>
+                                        ' text-2xl'}>CCOIN</code>
                             </h1>
                         </div>
 
