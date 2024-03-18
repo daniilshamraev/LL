@@ -31,8 +31,9 @@ function User({
                             unit: "liter",
                             unitDisplay: "short",
                             notation: "compact",
+                            currency: "СCOIN",
                         }
-                    )} СCOIN
+                    )}
                     </button>
                 </Link>
             </div>
