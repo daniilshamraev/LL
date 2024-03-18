@@ -25,7 +25,7 @@ function User({
                             ' rounded-2xl font-bold' +
                             ' hover:outline-none' +
                             ' hover:bg-blue-600'}>{Number(coin_balance).toLocaleString(
-                        "ru-RU",
+                        "en",
                         {
                             unitDisplay: "short",
                             notation: "compact",
