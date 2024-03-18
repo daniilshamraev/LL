@@ -1,5 +1,5 @@
 function User({
-                  key,
+                  index,
                   first_name,
                   last_name,
                   username,
@@ -8,7 +8,7 @@ function User({
 
     return (
         <div className={'flex mb-1 mt-2 items-center'}>
-            <b className={'mr-3'}>{key}</b>
+            <b className={'mr-3'}>{index}</b>
             <div
                 className="flex flex-col items-start ml-3 ">
                 <p className={'text-2xl font-light'}>{first_name + ' ' + last_name}</p>
