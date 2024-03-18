@@ -21,7 +21,6 @@ function User({
             <div className={'ml-auto'}>
                 <Link to={inventory_link}>
                     <button
-                        disabled={true}
                         className={'p-2 bg-blue-500' +
                             ' text-wrap text-white' +
                             ' rounded-2xl font-bold' +
