@@ -15,6 +15,7 @@ export interface UserProps {
     last_name: string
     username: string
     coin_balance: string
+    inventory_link: string
 }
 
 export default GameProps

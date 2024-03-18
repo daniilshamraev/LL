@@ -3,7 +3,8 @@ function User({
                   first_name,
                   last_name,
                   username,
-                  coin_balance
+                  coin_balance,
+                  inventory_link
               }) {
 
     return (
@@ -16,22 +17,22 @@ function User({
                    className={'text-blue-500'}>@{username}</a>
             </div>
             <div className={'ml-auto'}>
-                {/*<Link to={"/inventory/2354365236"}>*/}
-                <button
-                    disabled={true}
-                    className={'p-2 bg-blue-500' +
-                        ' text-wrap text-white' +
-                        ' rounded-2xl font-bold' +
-                        ' hover:outline-none' +
-                        ' hover:bg-blue-600'}>{Number(coin_balance).toLocaleString(
-                    "en",
-                    {
-                        unitDisplay: "short",
-                        notation: "compact",
-                    }
-                )} СCOIN
-                </button>
-                {/*</Link>*/}
+                <a href={inventory_link}>
+                    <button
+                        disabled={true}
+                        className={'p-2 bg-blue-500' +
+                            ' text-wrap text-white' +
+                            ' rounded-2xl font-bold' +
+                            ' hover:outline-none' +
+                            ' hover:bg-blue-600'}>{Number(coin_balance).toLocaleString(
+                        "en",
+                        {
+                            unitDisplay: "short",
+                            notation: "compact",
+                        }
+                    )} СCOIN
+                    </button>
+                </a>
             </div>
         </div>
     );

@@ -61,6 +61,7 @@ function UserList() {
                                           username={_user.username}
                                           first_name={_user.first_name}
                                           coin_balance={_user.coin_balance}
+                                          inventory_link={_user.inventory_link}
                                           last_name={_user.last_name}/>
                                 ))
                             }
