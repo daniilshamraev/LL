@@ -98,8 +98,6 @@ function App() {
                                         ' text-2xl'}>CCOIN</code>
                             </h1>
                         </div>
-
-
                         <div
                             className={'mt-8'}>
                         </div>

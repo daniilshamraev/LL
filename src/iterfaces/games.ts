@@ -10,4 +10,11 @@ export interface GameProps {
     game: GameProps
 }
 
+export interface UserProps {
+    first_name: string
+    last_name: string
+    username: string
+    coin_balance: string
+}
+
 export default GameProps
