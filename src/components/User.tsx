@@ -24,7 +24,15 @@ function User({
                             ' text-wrap text-white' +
                             ' rounded-2xl font-bold' +
                             ' hover:outline-none' +
-                            ' hover:bg-blue-600'}>{coin_balance} СCOIN
+                            ' hover:bg-blue-600'}>{Number(coin_balance).toLocaleString(
+                        "ru-RU",
+                        {
+                            style: "currency",
+                            unit: "liter",
+                            unitDisplay: "short",
+                            notation: "compact",
+                        }
+                    )} СCOIN
                     </button>
                 </Link>
             </div>
