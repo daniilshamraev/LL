@@ -27,13 +27,10 @@ function User({
                             ' hover:bg-blue-600'}>{Number(coin_balance).toLocaleString(
                         "ru-RU",
                         {
-                            style: "currency",
-                            unit: "liter",
                             unitDisplay: "short",
                             notation: "compact",
-                            currency: "СCOIN",
                         }
-                    )}
+                    )} СCOIN
                     </button>
                 </Link>
             </div>
