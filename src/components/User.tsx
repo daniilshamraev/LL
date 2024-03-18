@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 function User({
                   index,
                   first_name,
@@ -17,7 +19,7 @@ function User({
                    className={'text-blue-500'}>@{username}</a>
             </div>
             <div className={'ml-auto'}>
-                <a href={inventory_link}>
+                <Link to={inventory_link}>
                     <button
                         disabled={true}
                         className={'p-2 bg-blue-500' +
@@ -32,7 +34,7 @@ function User({
                         }
                     )} СCOIN
                     </button>
-                </a>
+                </Link>
             </div>
         </div>
     );
