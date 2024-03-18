@@ -69,7 +69,7 @@ function App() {
                         ' flex-col items-center'}>
                         <h2 className={'text-3x font-extralight' +
                             ' w-full' +
-                            ' text-center mb-4'}>Вам неообходимо
+                            ' text-center mb-4'}>Вам необходимо
                             подключить кошелек</h2>
                         <TonConnectButton/>
                     </div>
