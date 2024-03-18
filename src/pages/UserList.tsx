@@ -55,8 +55,8 @@ function UserList() {
                     users && (
                         <>
                             {
-                                users.map((_user: UserProps) => (
-                                    <User key={_user.username}
+                                users.map((_user: UserProps, index: number) => (
+                                    <User key={index}
                                           username={_user.username}
                                           first_name={_user.first_name}
                                           coin_balance={_user.coin_balance}
