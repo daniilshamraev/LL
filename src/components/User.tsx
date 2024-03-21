@@ -3,8 +3,6 @@ import {Link} from "react-router-dom";
 function User({
                   index,
                   first_name,
-                  last_name,
-                  username,
                   coin_balance,
                   inventory_link
               }) {
@@ -14,9 +12,9 @@ function User({
             <b className={'mr-3'}>{index}</b>
             <div
                 className="flex flex-col items-start ml-3 ">
-                <p className={'text-2xl font-light'}>{first_name + ' ' + last_name}</p>
-                <a href={"https://t.me/" + username}
-                   className={'text-blue-500'}>@{username}</a>
+                <p className={'text-2xl font-light'}>{first_name + ' ....'}</p>
+                {/*<a href={"https://t.me/" + username}*/}
+                {/*   className={'text-blue-500'}>@{username}</a>*/}
             </div>
             <div className={'ml-auto'}>
                 <Link to={inventory_link}>

@@ -58,11 +58,9 @@ function UserList() {
                                 users.map((_user: UserProps, index: number) => (
                                     <User key={index}
                                           index={index + 1}
-                                          username={_user.username}
                                           first_name={_user.first_name}
                                           coin_balance={_user.coin_balance}
-                                          inventory_link={_user.inventory_link}
-                                          last_name={_user.last_name}/>
+                                          inventory_link={_user.inventory_link}/>
                                 ))
                             }
                         </>
